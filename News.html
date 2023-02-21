@@ -13,56 +13,55 @@
         box-sizing: border-box;
       }
 
-      .box5 {
-        background: pink;
-      }
-
-      .box6 {
-        background: brown;
-      }
-
-      .box7 {
-        background: grey;
-      }
-
-      .box8 {
-        background: orange;
-      }
-
-      .box9 {
-        background: lightcyan;
-      }
-
-      .box10 {
-        background: lime;
-      }
-
-      .box11 {
-        background: blueviolet;
-      }
-
       main {
         height: 1200vh; /*zet grootte gewoon gigantisch om te kunnen blijven scrollen*/
         display: grid;
-        grid-template-columns: repeat(11, minmax(0, 1fr));
+        grid-template-columns: repeat(15, minmax(0, 1fr));
         grid-auto-rows: 10vh; /*infinite rows*/
       }
 
-      .img_header {
-        grid-column: 1/12;
+      .img_header{
+      grid-column: 1/16;
         grid-row: 1/6;
-        width: auto;
-        height: auto;
+        position: relative;
       }
-      img {
-                width:100%;
-                height:100%;
-                object-fit:cover;
-            }
+
+      img[src="IMGS/krant head.jpg"]{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
+
+     #page_title{
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        left: 50%; /* position the left edge of the element at the middle of the parent */
+        transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
+        background-color: black;
+        padding: 5px;
+      }
+
+
+/*#page_title{
+        color: lime;
+        position: absolute;
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        background: black;*/
+
+
+
+
+
+
+
+
 
       .nav_bar {
         background: #000000;
-        grid-column: 1/10;
+        grid-column: 1/13;
         grid-row: 4-5;
         width: auto;
         height: auto;
@@ -74,8 +73,8 @@
       }
 
       .search , .searchcontainer{
-        background: yellow;
-        grid-column: 10/12;
+        background: rgb(255, 192, 237);
+        grid-column: 13/16;
         grid-row: 4-5;
         display: flex;
         justify-content: center;
@@ -83,19 +82,110 @@
       }
 
       .top_stories{
-        background: red;
-        grid-column: 1/12;
+        grid-column: 1/16;
         grid-row: 5-6;
         display: flex;
         align-items: center;
         padding: 25px;
       }
+
+      .foto_art_1 , img[src="IMGS/commuting.jpg"]{
+        grid-column: 1/7;
+        grid-row: 8/14;
+        width:90%;
+        height:90%;
+        object-fit:cover;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .taliban{
+        grid-column: 7/13;
+        grid-row: 8/14;
+        display: flex;
+        flex-direction: column;
+        padding-top: 17px;
+        padding-right: 55px;
+      }
+
+      .dick{
+        grid-column: 1/7;
+        grid-row: 14/20;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+        padding-left: 55px;
+        padding-top: 17px;
+        padding-right: 55px;
+      }
+
+      .foto_art_2 , img[src="IMGS/dildo.jpg"]{
+        grid-column: 7/13;
+        grid-row: 14/20;
+        width:90%;
+        height:90%;
+        object-fit:cover;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .foto_sidebar_1 , img[src="IMGS/owl.jpg"]{
+        grid-column: 13/15;
+        grid-row: 8/10;
+        width:90%;
+        height:90%;
+        object-fit:cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .owl{
+        grid-column: 13/16;
+        grid-row: 10/12;
+      }
+
+      .foto_sidebar_2 , img[src="IMGS/bing.jpg"]{
+        grid-column: 13/15;
+        grid-row: 12/14;
+        width:90%;
+        height:90%;
+        object-fit:cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bing{
+        grid-column: 13/16;
+        grid-row: 14/16;
+      }
+
+      .foto_sidebar_3 , img[src="IMGS/biden.jpg"]{
+        grid-column: 13/15;
+        grid-row: 16/18;
+        width:90%;
+        height:90%;
+        object-fit:cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .biden{
+        grid-column: 13/16;
+        grid-row: 18/20;
+      }
+
     </style>
   </head>
   <body>
     <main>
       <div class="img_header">
-        <img src="IMGS/krant head.jpg" />
+        <h1 id="page_title">BAM PAPER</h1>
+        <img src="IMGS/krant head.jpg">
       </div>
       <div class="nav_bar">
         <h2>Politics</h2>
@@ -116,26 +206,39 @@
       <div class="top_stories">
         <h3>Top Stories</h3>
       </div>
-      <div class="box5">
-        <h1>box5</h1>
+      <div class="foto_art_1">
+        <img src="IMGS/commuting.jpg">
       </div>
-      <div class="box6">
-        <h1>box6</h1>
+      <div class="taliban">
+        <h2>Taliban Bureaucrats Hate Working Online All Day, 'Miss the Days of Jihad'</h2>
+        <br>
+        <h3>Interviews with five former Taliban fighters reveal the crushing ennui of office life in the big city.</h3>
       </div>
-      <div class="box7">
-        <h1>box7</h1>
+      <div class="dick">
+        <h2>'Ah Yes, This Is a Dick' Archaeologists May Have Found the First Roman Dildo</h2>
+        <br>
+        <h3>But the Ancient Romans loved phalluses so much that experts can't say for sure how it was actually used.</h3>
       </div>
-      <div class="box8">
-        <h1>box8</h1>
+      <div class="foto_art_2">
+        <img src="IMGS/dildo.jpg">
       </div>
-      <div class="box9">
-        <h1>box9</h1>
+      <div class="foto_sidebar_1">
+        <img src="IMGS/owl.jpg">
       </div>
-      <div class="box10">
-        <h1>box10</h1>
+      <div class="owl">
+        <h2>Flaco, the Owl Who Escaped From the Central Park Zoo, Will Be Allowed His Freedom. For Now.</h2>
       </div>
-      <div class="box11">
-        <h1>box10</h1>
+      <div class="foto_sidebar_2">
+        <img src="IMGS/bing.jpg">
+      </div>
+      <div class="bing">
+        <h2>Microsoft's Bing Is An Emotionally Manipulative Liar, And People Love It.</h2>
+      </div>
+      <div class="foto_sidebar_3">
+        <img src="IMGS/biden.jpg">
+      </div>
+      <div class="biden">
+        <h2>White House Offers Few Answers On Objects Shot From the Sky</h2>
       </div>
     </main>
   </body>
