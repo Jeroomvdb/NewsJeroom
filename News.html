@@ -21,7 +21,8 @@
       }
 
       .img_header{
-      grid-column: 1/16;
+        .grid-area: header;
+        grid-column: 1/16;
         grid-row: 1/6;
         position: relative;
       }
@@ -56,13 +57,14 @@
       }
 
       .btn {
-    border: none;
-    background-color: none;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-    color: white;
-  }
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+        color: white;
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
       .search , .searchcontainer{
         background: rgb(255, 192, 237);
@@ -80,7 +82,6 @@
         align-items: center;
         padding-left: 50px;
         padding-top: 30px;
-
       }
 
       .foto_art_1 , img[src="IMGS/commuting.jpg"]{
@@ -173,6 +174,13 @@
         grid-row: 18/20;
       }
 
+     /*@media only screen and (min-width: 500px)  {
+        grid-template-areas:
+        "header     header      header      header      header      header      header      head"
+        "navigation navigation  navigation  navigation  navigation  navigation  navigation  navigation"
+        "sidebar2 sidebar2"
+        "footer   footer";
+       }*/
     </style>
   </head>
   <body>
@@ -182,12 +190,20 @@
         <img src="IMGS/krant head.jpg">
       </div>
       <div class="nav_bar">
-        <h2><button class="btn politics">Politics</button></h2>
+        <div class="btn politics">Politics</div>
+        <div class="btn justice">Justice</div>
+        <div class="btn national_security">National Security</div>
+        <div class="btn world">World</div>
+        <div class="btn technology">Technology</div>
+        <div class="btn environment">Environment</div>
+
+        <!--<h2><button class="btn politics">Politics</button></h2>
         <h2><button class="btn justice">Justice</button></h2>
         <h2><button class="btn national_security">National Security</button></h2>
         <h2><button class="btn world">World</button></h2>
         <h2><button class="btn technology">Technology</button></h2>
-        <h2><button class="btn environment">Environment</button></h2>
+        <h2><button class="btn environment">Environment</button></h2>-->
+
       </div>
       <div class="search">
         <div class="search-container">
