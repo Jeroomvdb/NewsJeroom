@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS GRID</title>
-
+    <title>BAM PAPER</title>
     <style>
       * {
         margin: 0;
@@ -14,17 +13,18 @@
       }
 
       main {
-        height: 1200vh; /*zet grootte gewoon gigantisch om te kunnen blijven scrollen*/
+        height: 500vh; /*zet grootte gewoon gigantisch om te kunnen blijven scrollen*/
         display: grid;
         grid-template-columns: repeat(15, minmax(0, 1fr));
         grid-auto-rows: 10vh; /*infinite rows*/
       }
 
       .img_header{
-        .grid-area: header;
+        grid-area: header;
         grid-column: 1/16;
         grid-row: 1/6;
         position: relative;
+        border: 10px solid red;
       }
 
       img[src="IMGS/krant head.jpg"]{
@@ -36,11 +36,11 @@
      #page_title{
         color: rgb(255, 255, 255);
         position: absolute;
-        top: 50%;  /* position the top  edge of the element at the middle of the parent */
+        top: 51%;  /* position the top  edge of the element at the middle of the parent */
         left: 50%; /* position the left edge of the element at the middle of the parent */
         transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
         background-color: black;
-        padding: 5px;
+        padding: 9px 10px 9px 10px;
       }
 
       .nav_bar {
@@ -73,6 +73,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+
+      .searchcontainer{
+        border: 1px solid grey;
+        border-radius: 5px;
+        height: 20px;
+        width: 10px;
+        padding: 2px 23px 2px 30px;
+        outline: 0;
+        background-color: red;
       }
 
       .top_stories{
@@ -174,13 +184,24 @@
         grid-row: 18/20;
       }
 
-     /*@media only screen and (min-width: 500px)  {
+    /*@media only screen and (min-width: 500px)  {
+      main{
         grid-template-areas:
         "header     header      header      header      header      header      header      head"
         "navigation navigation  navigation  navigation  navigation  navigation  navigation  navigation"
         "sidebar2 sidebar2"
         "footer   footer";
-       }*/
+       }
+      }*/
+
+      /*SOLUTION VLAD / BUT CAN'T DECIDE WHAT HAPPENS / GENERAL SOLUTION */
+  /*@media only screen and (min-width: 500px)  {
+      main {
+        grid-template-columns: auto(8, 1fr)
+      }
+    }*/ 
+
+    
     </style>
   </head>
   <body>
