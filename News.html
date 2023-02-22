@@ -42,23 +42,6 @@
         padding: 5px;
       }
 
-
-/*#page_title{
-        color: lime;
-        position: absolute;
-        top: 50%;  
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        background: black;*/
-
-
-
-
-
-
-
-
-
       .nav_bar {
         background: #000000;
         grid-column: 1/13;
@@ -71,6 +54,15 @@
         gap: 8px;
         color: white;
       }
+
+      .btn {
+    border: none;
+    background-color: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+  }
 
       .search , .searchcontainer{
         background: rgb(255, 192, 237);
@@ -86,7 +78,9 @@
         grid-row: 5-6;
         display: flex;
         align-items: center;
-        padding: 25px;
+        padding-left: 50px;
+        padding-top: 30px;
+
       }
 
       .foto_art_1 , img[src="IMGS/commuting.jpg"]{
@@ -188,12 +182,12 @@
         <img src="IMGS/krant head.jpg">
       </div>
       <div class="nav_bar">
-        <h2>Politics</h2>
-        <h2>Justice</h2>
-        <h2>National Security</h2>
-        <h2>World</h2>
-        <h2>Technology</h2>
-        <h2>Environment</h2>
+        <h2><button class="btn politics">Politics</button></h2>
+        <h2><button class="btn justice">Justice</button></h2>
+        <h2><button class="btn national_security">National Security</button></h2>
+        <h2><button class="btn world">World</button></h2>
+        <h2><button class="btn technology">Technology</button></h2>
+        <h2><button class="btn environment">Environment</button></h2>
       </div>
       <div class="search">
         <div class="search-container">
